@@ -1,0 +1,39 @@
+{% extends "base_template.html" %}
+{% block title %}{{keyword}}{% endblock %}
+{% block content %}
+			<div class="w3-bar w3-responsive w3-green">
+				<div class="w3-bar-item">{{keyword}}</div>
+			</div>
+			<div class="w3-responsive">
+				<table class="w3-table-all">
+					<tbody>
+						<tr>
+							<th style="width:10%">Email</th>
+							{% for f in fields%}
+							<th style="width:15%">{{f}}</th>
+							{% endfor %}
+						</tr>
+						{% for e, v in emails.items() %}
+						<tr>
+							<td><button onclick="document.getElementById('id{{ed[e]["p"]}}').style.display='block'">{{e}}</button></td>
+							<div id="id{{ed[e]["p"]}}" class="w3-modal">
+								<div class="w3-modal-content">
+								  <header class="w3-container w3-teal"> 
+									<span onclick="document.getElementById('id{{ed[e]["p"]}}').style.display='none'" 
+									class="w3-button w3-display-topright">&times;</span>
+									<h2>Data for &quot;{{e}}&quot;</h2>
+								  </header>
+								  <div class="w3-container">
+									<p>{{ed[e]["data"]}}</p>
+								  </div>
+								</div>
+							</div>
+							{% for field in v %}
+							<td>{{v[field]}}</td>
+							{% endfor %}
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+{% endblock %}

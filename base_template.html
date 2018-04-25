@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+
+	<body class = "w3-container">
+		<div class="w3-bar w3-red">
+		  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+		  <a href="#" class="w3-bar-item w3-button">About</a>
+		  <div class="w3-dropdown-hover">
+			<button class="w3-button">Authors</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+			  {% for a in authors %}
+			  <a href="{{a}}.html" class="w3-bar-item w3-button">{{a}}</a>
+			  {% endfor %}
+			</div>
+		  </div>
+		  <div class="w3-dropdown-hover">
+			<button class="w3-button">Keywords</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+			  {% for k in keywords %}
+			  <a href="{{k}}.html" class="w3-bar-item w3-button">{{k}}</a>
+			  {% endfor %}
+			</div>
+		  </div>
+		</div>
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>

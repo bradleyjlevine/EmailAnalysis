@@ -1,0 +1,2 @@
+color,red,blue,green,yellow,purple
+united_states_of_america, us, usa, america
