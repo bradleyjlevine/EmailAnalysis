@@ -13,3 +13,7 @@ Takes in email files and extracts keywords based on frequency of the word.  Fina
   - compound.txt - list of compound words
   - noise.txt - list of noise words
   - substitution.txt - list of substitution (\<maped to\>, \<word1\>, \<word2\>,..., \<wordn\>)
+  
+- pip installs
+  - `pip install tqdm` - this is to have the loading bar during execution
+  - `pip install jinja2` - this is to use the HTML templets to and generate the webpages
