@@ -1,5 +1,5 @@
 # EmailAnalysis
-Takes in email files and extracts keywords based on frequency of the word.  Finally outputting a website to explore the keywords and see frequency analysis.
+Takes in email files and extracts keywords based on frequency of the word.  Finally outputting a website to explore the keywords and see frequency analysis.  SQLite was used because it has significant speed up and allowed easier analysis. 
 
 - Generated files:
   - keywords.db 
