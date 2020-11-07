@@ -16,4 +16,4 @@ Takes in email files and extracts keywords based on frequency of the word.  Fina
   
 - pip installs
   - `pip install tqdm` - this is to have the loading bar during execution
-  - `pip install jinja2` - this is to use the HTML templets to and generate the webpages
+  - `pip install jinja2` - this is to use the HTML templets to generate the webpages
