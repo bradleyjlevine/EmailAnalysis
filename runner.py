@@ -31,7 +31,7 @@ def main():
 	if "__pycache__" in choices:
 		choices.remove("__pycache__")
 	
-	print("Please enter the number for which coice you would like to run.")
+	print("Please enter the number for which choice you would like to run.")
 	
 	# Handle User Input
 	while True:
